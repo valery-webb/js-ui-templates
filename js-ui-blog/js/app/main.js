@@ -1,8 +1,7 @@
 require([
     'blog-app'
-    ], function(BlogApp) {
+    ], function(blogApp) {
 
-    BlogApp.initialize();
-    console.log(BlogApp, 'BlogApp in main.js')
+    blogApp.initialize();
 
 })

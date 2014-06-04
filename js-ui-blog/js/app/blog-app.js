@@ -6,7 +6,6 @@ define([
 
     var initialize,
         baseDomElement;
-        //blogBootstrap;
 
         // initial bootstrapping data
         window.blogBootstrap = {
@@ -44,6 +43,8 @@ define([
 
         var header = new HeaderView;
         var menu = new MenuView;
+
+        // route initialize & history start
     }
 
     return {
