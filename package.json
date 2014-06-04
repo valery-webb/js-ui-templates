@@ -1,0 +1,17 @@
+{
+    "name": "js-ui-blog",
+    "version": "0.0.1",
+    "author": {
+        "name": "Valery Shvyndzikau",
+        "email": "valery_shvyndzikau@epam.com",
+        "url": "https://github.com/valery-webb"
+    },
+    "devDependencies": {
+        "grunt": "latest",
+        "grunt-contrib-requirejs": "latest",
+        "grunt-contrib-less": "latest",
+        "grunt-contrib-watch" : "latest",
+        "grunt-contrib-jasmine": "~0.5.3",
+        "grunt-template-jasmine-requirejs": "~0.1.0"
+    }
+}
