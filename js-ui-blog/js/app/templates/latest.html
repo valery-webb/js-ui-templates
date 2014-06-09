@@ -1,0 +1,26 @@
+<!-- latest template start -->
+{{ _.each(posts, function(model) { }}
+<article>
+    <figure>
+        <img src="{{=model.url}}" />
+        <figcaption><h3>{{=model.title}}</h3></figcaption>
+    </figure>
+    <div class="meta-box h-row">
+        <div class="clmn-3 date">{{=model.date['$date']}}</div>
+        <div class="clmn-3 author">{{=model.author}}</div>
+        <div class="clmn-6 social-wrapper">
+            <ul class="social-toolbar">
+                <li><a href="#" title="">f 1</a></li>
+                <li><a href="#" title="">g 17</a></li>
+                <li><a href="#" title="">tw 5</a></li>
+                <li><a href="#" title="">в 47</a></li>
+                <li><a href="#" title="">я 14</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="h-row">
+        <p class="article-text">{{=model.body}}</p>
+    </div>
+</article>
+{{ }) }}
+<!-- latest template end -->

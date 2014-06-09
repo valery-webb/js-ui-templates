@@ -1,10 +1,9 @@
+<!-- menu template start -->
 <div class="services-container">
     <div class="services-toolbar">
-        {{ if (serviceBtns.length) { }}
-            {{ _.each(serviceBtns, function(btn) { }}
-                <button class="toolbar-btn {{=btn.btnType}}" data-content="{{=btn.btnType}}">{{=btn.sign}}</button>
-            {{  }) }}
-        {{ } }}
+        {{ _.each(serviceBtns, function(btn) { }}
+            <button class="toolbar-btn {{=btn.btnType}}" data-content="{{=btn.btnType}}">{{=btn.sign}}</button>
+        {{  }) }}
     </div>
     <div class="row-wrapper services-content">
     {{ _.each(serviceBtns, function(btn) { }}
@@ -14,11 +13,11 @@
 </div>
 <nav>
     <button type="button" class="toolbar-btn menu-toggle">m</button>
-    {{ if (menuItems.length) { }}
         <ul class="nav-list">
             {{ _.each(menuItems, function(item) { }}
                 <li><a href="#{{=item}}" title="">{{=item }}</a></li>
             {{  }) }}
         </ul>
-    {{ } }}
+
 </nav>
+<!-- menu template end -->

@@ -3,5 +3,4 @@ require([
     ], function(blogApp) {
 
     blogApp.initialize();
-
 })

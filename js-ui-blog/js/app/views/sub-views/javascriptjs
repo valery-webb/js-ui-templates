@@ -1,0 +1,28 @@
+define([
+    'backbone'
+    //,'text!../templates/header.html'
+    ],
+
+    function (B) {
+
+        var JSPageView = Backbone.View.extend({
+
+            el: '.javascript',
+
+            template: _.template(headerTpl),
+
+            initialize: function(){
+                //this.render();
+                console.log('javascript view ready')
+            },
+
+            render: function() {
+                //this.$el.html(this.template);
+                this.$el.append('JAVASCRIPT');
+                return this;
+            }
+
+        });
+
+        return JSPageView;
+});
