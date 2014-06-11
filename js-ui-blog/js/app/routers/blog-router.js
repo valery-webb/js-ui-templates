@@ -15,27 +15,21 @@ define([
             'html':        'html',
             'design':      'design'
         },
-
-        default: function() {
+        'default': function() {
             Backbone.pubSub.trigger('page:changed', {pageName: 'latestPage'})
         },
-
         javascript: function() {
             Backbone.pubSub.trigger('page:changed', {pageName: 'JSPage'})
         },
-
         css: function() {
             Backbone.pubSub.trigger('page:changed', {pageName: 'cssPage'})
         },
-
         latest: function() {
             Backbone.pubSub.trigger('page:changed', {pageName: 'latestPage'})
         },
-
         html: function() {
             Backbone.pubSub.trigger('page:changed', {pageName: 'htmlPage'})
         },
-
         design: function() {
             Backbone.pubSub.trigger('page:changed', {pageName: 'designPage'})
         }
