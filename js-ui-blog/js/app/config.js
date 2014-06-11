@@ -28,14 +28,3 @@ requirejs.config({
     }
 });
 
-
-define(['underscore'], function(_) {
-    _.templateSettings = {
-        encode: /\{\{([\s\S]+?)\}\}/g,
-        interpolate: /\{\{\=([\s\S]+?)\}\}/g,
-        evaluate: /\{\{([\s\S]+?)\}\}/g
-    };
-    return _;
-});
-
-

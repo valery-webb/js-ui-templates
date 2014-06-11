@@ -4,3 +4,4 @@ require([
 
     blogApp.initialize();
 })
+
