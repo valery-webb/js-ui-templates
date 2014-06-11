@@ -5,8 +5,8 @@ js-ui-templates
   * Clone this repo
   * Install nodejs
   * Install grunt
-  * Make build and by command 'grunt'
-  * Watch less by command 'grunt run less'
+  * Make build by command 'grunt'
+  * Watch less by command 'grunt run-less'
 
 2. Use:
   * Just clone this repo and run index.html
