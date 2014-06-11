@@ -9,7 +9,7 @@ js-ui-templates
   * Watch less by command 'grunt run-less'
 
 2. Use:
-  * Just clone this repo and run index.html
+  * Just clone this repo and run index.html via localhost
 
 <hr />
 compatibility: IE8+
