@@ -13,6 +13,8 @@ define([
 
             initialize: function(){
                 this.render();
+                console.log(_,'_ in tags view')
+                //console.log(under,'under in tags view')
             },
 
             render: function() {

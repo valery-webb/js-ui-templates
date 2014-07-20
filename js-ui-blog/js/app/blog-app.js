@@ -1,17 +1,18 @@
 define([
-    'jquery'
-    ,'backbone'
-    , 'views/header'
+    //'jquery'
+    //,'backbone'
+    'views/header'
     , 'views/menu'
     , 'views/aside'
     , 'views/tags'
     , 'routers/blog-router'
     , 'views/content'
-    ], function ($, Backbone, HeaderView, MenuView, AsideView, TagsView, BlogRouter, ContentView) {
+    ], function (HeaderView, MenuView, AsideView, TagsView, BlogRouter, ContentView) {
 
     var initialize,
         baseDomElement,
-        globals;
+        globals,
+        blogApp = {};
 
         // @todo: initial bootstrapping data into service global object
         window.blogBootstrap = {
@@ -46,7 +47,7 @@ define([
         }
 
     // Here is will init all start modules for the app
-    initialize = function() {
+    blogApp.initialize = function() {
 
         // @todo: app service object & gobals
         Backbone.pubSub = _.extend({}, Backbone.Events);
@@ -63,8 +64,10 @@ define([
                 Backbone.history.start();
     }
 
-    return {
-        initialize: initialize
-    }
+    // return {
+    //     initialize: initialize
+    // }
+
+    return blogApp;
 
 });

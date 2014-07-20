@@ -13,6 +13,12 @@ define([
 
             initialize: function(){
 
+                this.on('all', this.eventMatcher, this)
+
+            },
+
+            eventMatcher: function (evType) {
+                console.log(evType)
             },
 
             parse: function(response) {

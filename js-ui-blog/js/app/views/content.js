@@ -1,11 +1,11 @@
 define([
-    'backbone'
-    ,'views/sub-views/javascript'
+    //'backbone'
+    'views/sub-views/javascript'
     ,'views/sub-views/latest'
     ,'../globals'
     ],
 
-    function (Backbone, JSPageView, LatestPageView, globals) {
+    function (JSPageView, LatestPageView, globals) {
 
         var ContentView = Backbone.View.extend({
 
@@ -27,27 +27,28 @@ define([
             pageStrategy: function(opts) {
                 this.$el.find('section > div').hide();
                 this.$el.find("[data-page='" + opts.pageName + "']").show();
-                this[opts.pageName](opts.pageName);
+                //this[opts.pageName](opts.pageName);
+                this[opts.pageName](opts);
             },
 
-            JSPage: function(pageName) {
-                this.$el.find("[data-page='" + pageName + "']").html(pageName);
+            JSPage: function(opts) {
+                this.$el.find("[data-page='" + opts.pageName + "']");
             },
 
-            cssPage: function(pageName) {
-                this.$el.find("[data-page='" + pageName + "']").html(pageName);
+            cssPage: function(opts) {
+                this.$el.find("[data-page='" + opts.pageName + "']").html(opts.pageName);
             },
 
-            latestPage: function(pageName) {
+            latestPage: function(opts) {
                 this.subViews.latestPageView.retrivePosts();
             },
 
-            htmlPage: function(pageName) {
-                this.$el.find("[data-page='" + pageName + "']").html(pageName);
+            htmlPage: function(opts) {
+                this.$el.find("[data-page='" + opts.pageName + "']").html(opts.pageName);
             },
 
-            designPage: function(pageName) {
-                this.$el.find("[data-page='" + pageName + "']").html(pageName);
+            designPage: function(opts) {
+                this.$el.find("[data-page='" + opts.pageName + "']").html(opts.pageName);
             },
 
             render: function() {

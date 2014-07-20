@@ -1,11 +1,11 @@
 define([
-    'backbone'
-    ,'../../collections/blog-posts'
+    //'backbone'
+    '../../collections/blog-posts'
     ,'../../models/blog-post'
     ,'text!../../templates/latest.html'
     ],
 
-    function (B, BlogPostsCollection, BlogPostModel, latestTpl) {
+    function (BlogPostsCollection, BlogPostModel, latestTpl) {
 
         var LatestPageView = Backbone.View.extend({
 
@@ -16,12 +16,11 @@ define([
             template: _.template(latestTpl),
 
             initialize: function() {
-
-                this.collection.on('sync', this.processResults, this);
+                this.collection.on('reset', this.processResults, this);
             },
 
             retrivePosts: function() {
-                this.collection.fetch();
+                this.collection.fetch({reset: true});
             },
 
             processResults: function(collection, response, xhr) {
@@ -45,6 +44,7 @@ define([
                 })
 
                 this.$el.html(html);
+
                 return this;
             }
 
